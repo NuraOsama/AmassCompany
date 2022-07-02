@@ -1,0 +1,172 @@
+
+@use '../abstracts/variables' as var;
+@use '../abstracts/placeholders';
+
+  /* header */
+
+  header {
+
+
+   
+    position: absolute;
+    top: 0;
+    #{var.$left}:0;
+    #{var.$right}:0;
+    background-color:var.$whitecolor;
+    width: 100%;
+    height: 75px;
+    box-shadow: none;
+    z-index: 1000;
+    @extend  %transition;
+    
+    &.sticky-navbar{
+ 
+      position: fixed;
+      box-shadow: 0 0.1rem 0.5rem rgba($color: var.$darkbluecolor, $alpha: 0.12);
+
+    }
+
+  }
+  .navbar-light{
+
+  
+     align-items: flex-end;
+     @extend  %transition;
+    
+
+      .navbar-brand{
+
+        width: 155px;
+        margin-inline-end:0;
+        @extend  %transition;
+         
+      
+      }
+   
+      .navbar-toggler {
+    
+        position: relative;
+        width:2.5rem;
+        height: 2.5rem;
+        color:transparent;
+        border:unset; 
+        padding: 0;
+        z-index:2000;
+
+       
+        .navbar-toggler-icon{
+
+          margin-top: 0;
+
+          &,
+          &::after,
+          &::before {
+
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2.3px;
+            background: linear-gradient(to #{var.$right},var.$bgreencolor,var.$abluecolor,var.$bgreencolor);
+            border-radius:0.5rem;
+            @extend   %transition-linear;
+
+        }
+
+        &::before{
+
+           margin-top: 0.5rem;
+
+        }
+        &::after{
+
+           margin-top: -0.5rem;
+
+        }
+      }
+
+      &.expanded{
+
+       
+        .navbar-toggler-icon{
+
+
+          background: transparent;
+          
+
+              &::after, 
+              &::before {
+
+                margin-top: 0;
+                width:3rem;
+                height: 4.3px;
+                background:var.$lgraycolor;
+               
+
+             }
+
+             &::before {
+              
+              transform: rotate(45deg);
+            }
+            &::after{
+             
+              transform: rotate(-45deg);
+            }
+        }
+      }
+    }
+     
+    .navbar-nav{
+      .nav-item{
+
+        overflow: hidden;
+      }
+  
+      .nav-link{
+
+        display:inline-flex;
+        align-items: center;
+        @extend %PoppinsSemiBold;
+        color:var.$blackcolor;
+        @extend %transition;
+      
+        &:not(.lang){
+
+          padding: 0.7rem 1.5rem;
+
+        }
+        &.lang{
+
+          padding-inline-end: 0;
+          
+        }
+     
+        &:hover,
+        &:active,
+        &:focus,
+        &.active{
+
+          color:var.$greencolor;
+        }
+      
+
+     }
+
+     &.navbar-side{
+
+      .nav-link{
+
+        img{
+          
+          width: 23px;
+
+        }
+      }
+     }
+   }
+
+   
+}
+/* //header */
+  

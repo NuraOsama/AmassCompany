@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins';
+@use '../abstracts/placeholders';
+
+/* breadcrumb */
+.breadcrumb-sec{
+
+    background-color: var.$cbluecolor;
+    padding: 6.5rem 0;
+    margin-bottom:4rem;
+    @extend %mt-75;
+    
+    &::before{
+
+       @extend %pesudoabsolute;
+       top: 0;
+       #{var.$left}:0;
+       #{var.$right}:0;
+       width: 100%;
+       height: 100%;
+       background-image: url(../images/breadcrumb-vector.svg);
+        @include mixins.backgroundmixin(cover,bottom,no-repeat);
+
+    }
+    ol{
+
+
+        justify-content: center;
+        margin-bottom: 0;
+
+         
+        .breadcrumb-item{
+
+
+                font-size: 1.22rem;
+                text-transform: uppercase;
+                color:var.$whitecolor;
+                padding-inline-start: 1.7rem;
+                letter-spacing:0.5px;
+                @extend %PoppinsMedium;
+
+                &::before{
+
+                    padding-inline-end: 1.7rem;
+
+                }
+        }
+        a{
+            color:var.$whitecolor !important;
+        }
+        
+    }
+}
+/* //breadcrumb */

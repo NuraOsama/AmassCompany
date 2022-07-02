@@ -1,0 +1,712 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins';
+
+
+
+/*--media query--*/
+@media screen and (min-width:1440px){
+
+    .f-19{
+   
+        font-size: 1.24rem;
+    
+    }
+    .f-15{
+
+        font-size: 1rem;
+    }
+    .f-14{
+
+        font-size:0.85rem;
+    
+    }
+     
+    .w-60{
+
+        width: 50%;
+    }
+
+    /* modal */
+    .modal {
+
+        .col-sm-12{
+        
+           &:first-child{
+    
+             
+                padding-inline-end: 1.7rem;
+    
+            }
+            &:last-child{
+    
+                padding-inline-start: 1.7rem;
+    
+            }
+    
+       }
+    }
+    .modal-body{
+
+        padding-inline-start: 8rem;
+        padding-inline-end: 8rem;
+    }
+
+     /* //modal */
+    /* hero */
+    .hero-sec{
+
+        height:650px;
+      
+        &::before{
+    
+        
+            top:340px;
+            background-size: cover;
+           
+        }
+        .image{
+
+           margin-inline-end: 0;
+
+          
+        }
+        img{
+    
+            width:100%;
+        }
+
+    }
+    /* //hero */
+
+
+    /* contact remind */
+
+    .contact-remind{
+
+    
+        &::after{
+            
+
+             background-size: 235px;
+             #{var.$right}:60px;
+          
+         
+        }
+  
+    .content{
+
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+   
+    .image{
+
+        transform: translateX(0);
+    }
+    img{
+
+         width: 370px;
+    }
+    }
+   /* //contact remind */
+
+
+}
+@media screen and (max-width:1400px) and (min-width:1395px){
+    
+
+    /* hero */
+    .hero-sec {
+
+        &::before{
+
+           top: 135px;
+
+        }
+    }
+    /* //hero */
+    /* contact remind */
+   
+        .contact-remind{
+    
+        
+            &::after{
+                
+    
+                 background-size: 245px;
+                 #{var.$right}:80px;
+              
+             
+            }
+      
+
+          img {
+            width: 370px;
+           }
+        }
+       /* //contact remind */
+
+}
+@media screen and (max-width:1199px){
+
+
+   /* contact remind */
+   .contact-remind{
+    
+    &::after{
+       #{var.$right}: 40px;
+       background-size: 180px;
+
+     }
+      img {
+      
+        width: 335px;
+    }
+  }
+  /* contact remind */
+
+
+
+}
+@media screen and (max-width:1200px) and (min-width:1025px){
+    
+     
+  /* hero */
+  .hero-sec{
+  
+      &::before {
+    
+       top: 125px;
+    }
+  }
+  /* //hero */
+
+ 
+ 
+}
+@media screen and  (max-width:1200px) and (min-width:992px){
+
+    .card-details .col-lg-3,
+    .jobs .col-lg-3,
+    .col-lg-4.col-md-6{
+     
+        width: 50%;
+
+    }
+
+
+    /* jobs details */
+    .card-details {
+
+    
+        ul  {
+       
+            li{
+
+              flex-direction: column;
+
+              .icon{
+
+                margin-inline-end:0;
+                margin-bottom: 1rem;
+
+              }
+            
+            }
+        }
+    }
+    /* //jobs details */
+
+
+}
+@media screen and  (max-width:1024px) and (min-width:992px){
+ 
+
+  /* modal */
+ .modal-body {
+
+     .d-flex {
+
+         .info:first-child {
+
+             margin-inline-end: 3rem;
+
+         }
+      }   
+  }
+  /* //modal */
+
+}
+@media screen and  (max-width:1024px){
+
+   .ps-5.content{
+     
+     padding-inline-start: 0 !important;
+
+   }
+   .pe-5{
+     
+
+     padding-inline-end: 0 !important;
+
+  }
+
+
+  /* modal */
+
+  .modal-header {
+   
+    padding: 2rem;
+
+  }
+  .modal-body {
+
+     padding-inline-start:0;
+     padding-inline-end:0;
+     
+      .col-md-12{
+
+          padding-inline-start:calc(1.5rem * .5) !important;
+          padding-inline-end:calc(1.5rem * .5) !important;
+
+      }
+     
+   }
+   /* //modal */
+
+
+  /* hero */
+  .hero-sec {
+
+     &::before {
+    
+        top: 110px;
+
+     }
+     .image {
+    
+        margin-inline-end: -100px;
+     }
+   }
+   /*// hero */
+
+}
+@media screen and (max-width:991px) {
+
+
+    .about.image,
+    .projects.content,
+    .contact.content,
+    aside:last-of-type .content,
+    .card-details{
+
+        margin-bottom: 5rem;
+
+    }
+    .col-lg-9:last-of-type{
+
+        order:2;
+    }
+
+    
+    .modal .image{
+
+        margin-bottom: 3rem;
+
+    }
+  
+    .about.h-100,
+    .projects.h-100{
+
+        height: max-content !important;
+
+    }
+    .sec{
+
+        padding:4rem 0;
+        margin-bottom: 4rem;
+    }
+    .col-ps-2,
+    .ps-5,
+    .px-5{
+
+        padding-inline-start: calc(1.5rem * .5) !important;
+
+    }
+    .col-pe-2,
+    .pe-0,
+    .px-5{
+
+        padding-inline-end: calc(1.5rem * .5) !important;
+
+    }
+    .ms-5{
+
+        margin-inline-start: 0 !important;
+
+    }
+    .pe-6{
+
+        padding-inline-end: 0;
+    }
+    .w-90,
+    .w-60{
+        width: 100%;
+    }
+    .h-670,
+    .h-600,
+    .h-550{
+
+        height: 100%;
+
+    }
+
+    /* header */
+    .navbar-light{
+
+        align-items: center;
+
+      .navbar-collapse  {
+
+           position:fixed;
+           top:0;
+           #{var.$right}:-100%;
+           display:flex !important;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           width: 100%;  
+           height: 100%;     
+           background-color:var.$whitecolor;
+           overflow-x: hidden;
+           text-align:center;
+           z-index:1000;
+           -webkit-transition: all 0.7s  ease-in-out;
+           -moz-transition: all 0.7s  ease-in-out;
+           -o-transition: all 0.7s  ease-in-out;
+           -ms-transition: all 0.7s  ease-in-out;
+           transition: all 0.7s ease-in-out;
+
+           &.active{
+        
+            #{var.$right}:0;
+
+        
+          }
+    
+      }
+      .navbar-nav{
+
+          overflow: hidden;
+          
+      .nav-link{
+      
+            &.show{
+           
+                animation:slideInRight 0.7s 0.5s backwards;
+
+            }
+            &.hide{
+           
+                animation:slideOutRight 0.4s 0.07s backwards;
+
+            }
+        
+        }
+
+    }
+
+    }
+    /* //header */
+
+    /* hero */
+    .hero-sec{
+
+        height:100%;
+
+        &::before {
+    
+            top: 140px;
+    
+         }
+
+        .content{
+
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .image {
+            margin-inline-end: 0 !important;
+        }
+         img {
+
+            width:100%;
+        }
+    }
+    /* //hero */
+
+
+    /* contact remind */
+    .contact-remind{
+
+        padding-inline-start: 1.3rem;
+        padding-inline-end:1.3rem;
+
+       &::before {
+
+         bottom: unset;
+         height:80%;
+
+       }
+       &::after {
+
+        top: 160px;
+        background-size: 270px;
+
+       }
+       img {
+
+         width: 100%;
+
+       }
+    }
+     /* //contact remind */
+
+     /* branches */
+     .branches-sec {
+     
+       .col-lg-4 {
+
+           &:nth-child(even){
+        
+             .content{
+       
+                 margin-inline-end: unset;
+
+       
+             }
+         }
+        &:nth-child(even),
+         &:last-child{
+        
+            .content{
+        
+               margin-inline-start: unset;
+ 
+        
+             }
+         }
+       }
+     }
+    /* //branches */ 
+
+
+}
+@media screen and (max-width:767px){
+
+    .h-210{
+
+        height: 100%;
+        
+    }
+    .sharing-media.d-flex{
+
+        flex-direction: column;
+
+    } 
+    /* modal */
+    .modal-header {
+
+        padding: 1rem 1rem 2.5rem;
+
+        .btn-close {
+           
+            margin: 0 0 0 auto; 
+        }
+    }
+    .modal-body {
+
+       .d-flex {
+
+         .info:first-child {
+
+             margin-inline-end:2rem;
+
+         }
+       }   
+    }
+    /* //modal */
+
+   /*--notift alert--*/
+
+   #ui_notifIt{
+
+    width: 95% !important;
+
+   }
+
+  /*--//notift alert--*/
+
+    /* contact remind */
+    .contact-remind{
+
+       &::after {
+
+         #{var.$right}: 30px;
+         background-size: 225px;
+
+       }
+       
+    }
+     /* //contact remind */
+    /* footer */
+    footer{
+
+        ul{
+
+            flex-direction: column;
+
+            li:not(:last-child){
+
+              margin-bottom: 1.5rem;
+             
+            }
+        }
+    }
+    /* //footer */   
+}
+@media screen and (max-width:500px){
+     
+    .f-43 {
+        font-size: 2.5rem;
+    }
+    /* breadcrumb */
+    .breadcrumb-sec{
+
+        ol{
+            .breadcrumb-item{
+    
+                padding-inline-start: 1.3rem;
+            
+    
+                &::before{
+    
+                   padding-inline-end: 1.3rem;
+    
+                }
+            }
+        }
+    }
+    /* //breadcrumb */
+    /* contact remind */
+    .contact-remind{
+        
+        &::after {
+         
+         background-size: 190px;
+
+      }
+    }
+    /* //contact remind */
+
+}
+@media screen and (max-width:425px){
+
+    .sec{
+
+        padding:3rem 0;
+        margin-bottom: 3rem;
+    }
+
+     /* heading */
+    .head.d-flex{
+
+       flex-direction:column;
+       
+        h4.mb-4{
+
+          margin-bottom: 0.5rem !important;
+
+        }
+    }
+     /* //heading */
+     /* modal */
+     .modal-body {
+
+        .d-flex {
+   
+            flex-wrap: wrap;
+
+            .info:first-child {
+   
+                margin-inline-end:0;
+                margin-bottom:2rem;
+   
+            }
+         }   
+     }
+     /* //modal */
+    /* contact remind */
+      .contact-remind{
+        
+        &::after {
+        
+          top: 150px;
+          background-size: 160px;
+
+      }
+    }
+    /* //contact remind */
+
+}
+@media screen and (max-width:375px){
+   
+    /* jobs details */
+    .card-details {
+        ul  {
+       
+            li{
+
+              flex-direction: column;
+
+              .icon{
+
+                margin-inline-end:0;
+                margin-bottom: 1rem;
+
+              }
+            
+            }
+        }
+    }
+    /* //jobs details */
+}
+@media screen and (max-width:320px){
+
+    .f-35 {
+        font-size: 1.7rem;
+    }
+    .f-32{
+
+        font-size: 1.8rem;
+        
+    }
+    .f-19 {
+        font-size: 1.15rem;
+    }
+
+      
+    /* contact remind */
+     .contact-remind{
+        
+        &::after {
+        
+         background-size: 110px;
+
+      }
+    }
+    /* //contact remind */
+
+}
+/*--//media query--*/

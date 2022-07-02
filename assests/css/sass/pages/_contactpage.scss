@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/placeholders';
+
+/* branches us */
+
+.col-lg-4{
+
+    &:nth-child(even){
+
+      .branches{
+
+         margin: auto;
+
+      }
+   }
+   &:last-child{
+    
+      .branches{
+
+        margin-inline-start: auto;
+      }
+   }
+ }
+.branches{
+   
+            
+    display: table;
+
+}
+/* //branches us */

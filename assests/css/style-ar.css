@@ -1,0 +1,392 @@
+/* directions */
+/* //directions */
+/* color */
+/* //colors */
+/* Overaly Mixin */
+/* //Overaly Mixin */
+/* Background Mixin */
+/* //Background Mixin */
+/* Prefixer Mixin */
+/* //Prefixer Mixin */
+/* Keyframes Animation Mixin */
+/* //Keyframes Animation Mixin */
+.f-en {
+  font-family: "PoppinsRegular", sans-serif;
+}
+
+body, .modal-body .head p {
+  font-family: "LTZawiRegular", sans-serif;
+}
+
+.head p, .btn, .form-control::-webkit-file-upload-button, .modal-body .form-check label, .modal-body .input-group label, .breadcrumb-sec ol .breadcrumb-item, .jobs h5, .jobs .text span, .card-details .box small {
+  font-family: "LTZawiMedium", sans-serif;
+}
+
+h3, h4, h5, .head a, .btn.btn-info, .navbar-light .navbar-nav .nav-link, .accordion-item .accordion-button, .card-details .box span {
+  font-family: "LTZawiBold", sans-serif;
+}
+
+.lang-ar {
+  display: none !important;
+}
+
+.lang-en {
+  display: inline-flex !important;
+}
+
+.btn span, .breadcrumb-sec ol .breadcrumb-item::before, .hero-sec::before, .hero-sec .image, .contact.image img, .contact-remind::after, .auto-scroll-to-top {
+  transform: scaleX(-1);
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+.letter-spacing {
+  letter-spacing: 0;
+}
+
+.fa-angle-right:before {
+  content: "\f104";
+}
+
+/* heading */
+/* //heading */
+/* lang */
+/* //lang */
+/* buttons */
+.btn::before {
+  left: 0;
+  right: -5px;
+  transform: skewX(15deg);
+}
+/* //buttons */
+/* splite image cells */
+.splitting.cells img {
+  display: block;
+  width: 100%;
+}
+
+@supports (display: grid) {
+  .splitting.cells {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    visibility: hidden;
+  }
+
+  .splitting .cell-grid {
+    right: 0;
+  }
+
+  .splitting .cell-inner {
+    right: calc(-100% * var(--col-index));
+  }
+}
+/* //splite image cells */
+/* form */
+[type=email], [type=number], [type=tel], [type=url] {
+  direction: rtl;
+}
+
+/* input file */
+/* //input file */
+/* select */
+.select2-container--default .select2-search--dropdown .select2-search__field,
+.select2-container .select2-selection--single .select2-selection__rendered,
+.select2-results__option {
+  text-align: right !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  left: 1px;
+  right: unset;
+}
+
+.select2-container--default .select2-results > .select2-results__options {
+  direction: rtl;
+}
+
+/* //select */
+/* input group */
+.filter .input-group .input-group-text {
+  left: 0;
+  right: unset;
+}
+
+/* //input group */
+/*  validate form */
+.form-control.is-invalid,
+.was-validated .form-control:invalid,
+.form-control.is-valid,
+.was-validated .form-control:valid,
+.was-validated select.form-control:invalid ~ .select2-container--default .select2-selection--single,
+.was-validated select.form-control:valid ~ .select2-container--default .select2-selection--single {
+  background-position: left 0.875rem top;
+}
+
+.form-control[type=file].is-invalid,
+.was-validated .form-control[type=file]:invalid,
+.form-control[type=file].is-valid,
+.was-validated .form-control[type=file]:valid {
+  background-position: left 0.875rem top calc(0.7em + 0.1875rem);
+}
+
+.was-validated textarea.form-control:invalid,
+textarea.form-control.is-invalid,
+.was-validated textarea.form-control:valid,
+textarea.form-control.is-valid {
+  background-position: top calc(-0.1em + 0.1875rem) left 0.725rem;
+}
+
+/* // validate form */
+/* //form */
+/* modal */
+.modal-body .form-check label {
+  padding-inline-start: 1rem;
+}
+/* //modal */
+/* breadcrumb */
+.breadcrumb-sec ol .breadcrumb-item {
+  padding-inline-start: 0;
+  padding-inline-end: 1.7rem;
+}
+.breadcrumb-sec ol .breadcrumb-item::before {
+  padding-inline-start: 1.7rem;
+  padding-inline-end: 0;
+}
+
+/* //breadcrumb */
+/* animation */
+/* fill up */
+@-webkit-keyframes fillup-x {
+  0% {
+    transform: translateX(150px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes fillup-x {
+  0% {
+    transform: translateX(150px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fillup-x {
+  0% {
+    transform: translateX(150px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fillup-x-flip {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes fillup-x-flip {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fillup-x-flip {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/*// fill up */
+@-webkit-keyframes zoomin {
+  0% {
+    transform: scale(1.2);
+    clip-path: inset(60% 0 60% 60%);
+  }
+  100% {
+    transform: scale(1);
+    clip-path: inset(0 0 0 0);
+  }
+}
+@-moz-keyframes zoomin {
+  0% {
+    transform: scale(1.2);
+    clip-path: inset(60% 0 60% 60%);
+  }
+  100% {
+    transform: scale(1);
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes zoomin {
+  0% {
+    transform: scale(1.2);
+    clip-path: inset(60% 0 60% 60%);
+  }
+  100% {
+    transform: scale(1);
+    clip-path: inset(0 0 0 0);
+  }
+}
+@-webkit-keyframes zoomin-flip {
+  0% {
+    transform: scale(1.5);
+    clip-path: inset(0 -20% 60% 60%);
+  }
+  100% {
+    transform: scale(1);
+    clip-path: inset(0 0 0 0);
+  }
+}
+@-moz-keyframes zoomin-flip {
+  0% {
+    transform: scale(1.5);
+    clip-path: inset(0 -20% 60% 60%);
+  }
+  100% {
+    transform: scale(1);
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes zoomin-flip {
+  0% {
+    transform: scale(1.5);
+    clip-path: inset(0 -20% 60% 60%);
+  }
+  100% {
+    transform: scale(1);
+    clip-path: inset(0 0 0 0);
+  }
+}
+/* //zoomin */
+/* //animation */
+/* header */
+.navbar-light .navbar-toggler.expanded .navbar-toggler-icon::before {
+  transform: rotate(-45deg);
+}
+.navbar-light .navbar-toggler.expanded .navbar-toggler-icon::after {
+  transform: rotate(45deg);
+}
+/* //header */
+/* hero */
+.hero-sec {
+  background: linear-gradient(to left, #3447A0, #30bb92);
+}
+.hero-sec .image {
+  margin-inline-end: 40px;
+}
+
+/* //hero */
+/* news feed */
+.newsfeed:hover img {
+  transform: scale(1.1) translateX(20px);
+}
+
+/* //news feed */
+/* jobs */
+/* //jobs */
+/* jobs details */
+/* //jobs details */
+/* contact us */
+/* //contact us */
+/* contact remind */
+.contact-remind::after {
+  right: -50px;
+}
+.contact-remind .image {
+  transform: translateX(150px) scaleX(-1);
+}
+
+/* //contact remind */
+/* scroll */
+/* scroll to top */
+.auto-scroll-to-top {
+  left: 2rem;
+  right: unset;
+}
+
+/* //scroll to top */
+/* //scroll */
+/*--media query--*/
+@media screen and (min-width: 1440px) {
+  /* contact remind */
+  .contact-remind::after {
+    right: -60px;
+  }
+
+  /* //contact remind */
+}
+@media screen and (max-width: 1400px) and (min-width: 1395px) {
+  /* contact remind */
+  .contact-remind::after {
+    right: -80px;
+  }
+
+  /* //contact remind */
+}
+@media screen and (max-width: 1199px) {
+  /* contact remind */
+  .contact-remind::after {
+    right: -40px;
+  }
+  .contact-remind .image {
+    transform: translateX(100px) scaleX(-1);
+  }
+
+  /* contact remind */
+}
+@media screen and (max-width: 1024px) {
+  /* header */
+  .navbar-light .navbar-collapse {
+    left: -100%;
+    right: unset !important;
+  }
+  .navbar-light .navbar-collapse.active {
+    left: 0;
+  }
+  .navbar-light .navbar-nav .nav-link.show {
+    animation: slideInLeft 0.7s 0.5s backwards;
+  }
+  .navbar-light .navbar-nav .nav-link.hide {
+    animation: slideOutLeft 0.4s 0.07s backwards;
+  }
+
+  /* //header */
+  /* hero */
+  .hero-sec .image {
+    margin-inline-end: 40px;
+  }
+
+  /*// hero */
+}
+@media screen and (max-width: 991px) {
+  /* contact remind */
+  .contact-remind .image {
+    transform: translateX(30px) scaleX(-1);
+    margin-top: 0.1rem;
+  }
+
+  /* //contact remind */
+}
+@media screen and (max-width: 767px) {
+  /* contact remind */
+  .contact-remind::after {
+    right: -30px;
+  }
+
+  /* //contact remind */
+}
+/*--//media query--*/
+
+/*# sourceMappingURL=style-ar.css.map */

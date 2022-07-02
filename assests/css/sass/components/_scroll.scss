@@ -1,0 +1,141 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/placeholders';
+
+
+ /* scroll */
+/* scroll to top */ 
+.auto-scroll-to-top {
+
+  position: fixed;
+  width: 3.3rem;
+  height: 3.3rem;
+  bottom: 3rem;
+  #{var.$right}: 2rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius:50%;
+  background-color: var.$bluecolor;
+  clip-path: circle(0 at 0 0); 
+  z-index: 700;
+  @extend %transition;
+
+   &:hover{
+
+      background-color: var.$greencolor;
+
+   }
+   img{
+   
+      width:30px;
+      height:30px;
+      filter: brightness(10);
+
+   }
+}
+.visible {
+
+   clip-path: circle(150% at 100% -30%);
+
+}
+/* //scroll to top */
+
+/* scroll design */
+/* Chrome && Edge && Safari */
+
+body::-webkit-scrollbar,
+.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar,
+.modal::-webkit-scrollbar{
+
+   width:0.43rem !important;
+
+}
+body::-webkit-scrollbar-track,
+.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-track,
+.modal::-webkit-scrollbar-track{
+
+   box-shadow:transparent;
+
+}
+body::-webkit-scrollbar-track,
+.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-track{
+
+   background-color:transparent;
+
+}
+.modal::-webkit-scrollbar-track{
+
+   background-color:var.$whitecolor;
+
+}
+body::-webkit-scrollbar-thumb,
+.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-thumb,
+.modal::-webkit-scrollbar-thumb{
+
+   border-radius: 0.2rem;
+   @extend %transition;
+
+}
+body::-webkit-scrollbar-thumb,
+.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-thumb{
+
+    background-color:var.$greencolor !important;
+
+}
+.modal::-webkit-scrollbar-thumb{
+
+   background-color:var.$lgraycolor !important;
+
+}
+body::-webkit-scrollbar-thumb:hover{
+
+  background-color:var.$bluecolor !important;
+
+}
+.select2-container--default .select2-results>.select2-results__options::-webkit-scrollbar-thumb:hover{
+
+   background-color:var.$cgreencolor !important;
+
+}
+
+.modal::-webkit-scrollbar-thumb:hover{
+
+   background-color:var.$cgraycolor !important;
+
+}
+
+/* //Chrome && Edge && Safari */
+
+/* firefox */
+:root,
+.select2-container--default .select2-results>.select2-results__options,
+.modal{
+
+   scrollbar-width: thin !important;
+
+
+}
+:root{
+  
+    scrollbar-color: var.$bluecolor transparent;
+   
+  }
+
+  .select2-container--default .select2-results>.select2-results__options{
+
+   scrollbar-color: var.$greencolor transparent;
+  
+
+  }
+  .modal{
+
+   scrollbar-color: var.$lgraycolor transparent;
+
+}
+
+/* //firefox */
+
+/* //scroll design */
+/* //scroll */

@@ -1,0 +1,116 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/placeholders';
+
+/* modal */
+.modal {
+
+    background-color: var.$whitecolor;
+
+    .col-md-12{
+    
+       &:first-child{
+
+            padding-inline-start: 0;
+            padding-inline-end: 1.3rem;
+
+        }
+        &:last-child{
+
+            padding-inline-start: 1.3rem;
+            padding-inline-end: 0;
+
+        }
+
+   }
+}
+.modal-content{
+    height:max-content !important;
+}
+.modal-header {
+   
+    padding: 2rem 4rem 0;
+    border-bottom: unset;
+
+}
+.modal-body{
+
+    padding-inline-start: 5.5rem;
+    padding-inline-end: 5.5rem;
+    overflow-y: hidden !important;
+    
+    .image{
+
+        img{
+
+            box-shadow: 0 2px 6px rgba($color: var.$darkcolor, $alpha: 0.25);
+            border-radius: 0.75rem;
+
+        }
+    }
+    .d-flex{
+
+        .info:first-child{
+
+            margin-inline-end:10rem;
+        }
+    }
+
+    .head{
+
+        p{
+
+            font-family:"Poppinslight",sans-serif;
+        }
+    }
+
+    .card{
+
+        border-color:var.$lgraycolor;
+        border-radius: 0.5rem;
+    }
+    
+    .form-control{
+
+        margin-bottom: 1rem;
+    }
+
+   .form-check{
+
+       label{
+
+           padding-inline-start:1rem;
+           @extend %PoppinsMedium;
+
+      }
+      .form-check-input{
+
+        width: 1.15em;
+        height: 1.15em;
+        border-radius: 0;
+        
+        &:checked[type=checkbox]{
+
+            background-size: 15px;
+
+        }
+      }
+
+    }
+    .input-group{
+
+        label{
+
+            @extend %PoppinsMedium;
+        }
+    }
+   
+
+}
+.btn-close{
+
+    background-size: 2em;
+    opacity: 0.13 !important;
+    box-shadow: unset !important;
+    outline: unset !important;
+}
+/* //modal */

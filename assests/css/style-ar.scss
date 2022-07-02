@@ -1,0 +1,616 @@
+@use 'sass/abstracts/variables' as var;
+@use 'sass/abstracts/mixins';
+@use 'sass/abstracts/placeholders';
+
+
+body{
+
+    direction:var.$rtldir;
+    text-align:var.$right;
+    @extend %LTZawiRegular;
+
+}
+
+.letter-spacing{
+
+    letter-spacing:0;
+    
+}
+.fa-angle-right:before{
+
+    content:"\f104";
+
+}        
+
+/* heading */
+h3,h4,h5{
+
+    @extend %LTZawiBold;
+    
+}
+.head{
+
+    p{
+
+        @extend %LTZawiMedium;
+
+    }
+    a{
+
+        @extend %LTZawiBold;
+        
+    }
+
+}
+/* //heading */
+/* lang */
+.lang-ar{
+
+    @extend %d-none;
+
+}
+.lang-en{
+
+    @extend %d-inlineflex;
+
+}
+.f-en{
+
+    @extend %PoppinsRegular;
+
+}
+/* //lang */
+
+/* buttons */
+.btn{
+
+    @extend %LTZawiMedium;
+
+
+    &::before{
+
+       
+        #{var.$left}:0;
+        #{var.$right}: -5px;
+        transform: skewX(15deg);
+        
+    }
+    span{
+
+        @extend %flipX;
+
+    } 
+    &.btn-info{
+
+        @extend %LTZawiBold;
+
+    }
+}
+/* //buttons */
+
+/* splite image cells */
+.splitting.cells img {
+
+    display: block;
+    width: 100%;
+
+  }
+ @supports (display: grid) {
+    .splitting.cells {
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      visibility: hidden;
+    }
+    .splitting .cell-grid {
+     
+      #{var.$right}: 0;
+     
+    }
+    
+    .splitting .cell-inner {
+      #{var.$right}: calc(-100% * var(--col-index));
+    }
+ }
+ /* //splite image cells */
+
+
+  /* form */
+   [type=email], [type=number], [type=tel], [type=url]{
+
+      direction: rtl;
+
+   }
+    /* input file */
+
+     .form-control::-webkit-file-upload-button {
+  
+
+        @extend %LTZawiMedium;
+    
+      }
+    /* //input file */
+
+    /* select */
+
+    .select2-container--default .select2-search--dropdown .select2-search__field,
+    .select2-container .select2-selection--single .select2-selection__rendered,
+    .select2-results__option{
+
+
+        text-align: var.$right !important;
+    
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+
+        #{var.$left}:1px;
+        #{var.$right}:unset;
+
+    }
+    .select2-container--default .select2-results>.select2-results__options{
+
+        direction: rtl;
+    }
+
+    /* //select */
+
+ 
+    /* input group */
+   .filter {
+
+     .input-group{
+
+        .input-group-text{
+
+           #{var.$left}:0;
+           #{var.$right}:unset;
+
+      
+
+        }
+    }
+   }
+    /* //input group */ 
+
+/*  validate form */
+.form-control.is-invalid,
+.was-validated .form-control:invalid,
+.form-control.is-valid,
+.was-validated .form-control:valid,
+.was-validated select.form-control:invalid ~ .select2-container--default .select2-selection--single,
+.was-validated select.form-control:valid ~ .select2-container--default .select2-selection--single{
+
+
+    background-position: var.$left calc(0.375rem + 0.5rem) top;
+    
+}
+
+.form-control[type=file].is-invalid,
+.was-validated .form-control[type=file]:invalid,
+.form-control[type=file].is-valid,
+.was-validated .form-control[type=file]:valid{
+
+
+    background-position: var.$left calc(0.375rem + 0.5rem) top calc(0.7em + 0.1875rem);
+    
+}
+.was-validated textarea.form-control:invalid,
+textarea.form-control.is-invalid,
+.was-validated textarea.form-control:valid,
+textarea.form-control.is-valid {
+
+    background-position: top calc(-0.1em + 0.1875rem) var.$left calc(0.375rem + 0.35rem);
+}
+
+/* // validate form */
+/* //form */
+
+/* modal */
+.modal-body{
+
+    .head{
+
+        p{
+
+            @extend %LTZawiRegular;
+
+        }
+    }
+    .form-check{
+
+        label{
+ 
+            padding-inline-start:1rem;
+            @extend %LTZawiMedium;
+ 
+       }
+    }
+    .input-group{
+
+        label{
+
+            @extend %LTZawiMedium;
+
+        }
+    }
+}
+/* //modal */
+
+/* breadcrumb */
+.breadcrumb-sec{
+
+    ol{
+
+        
+         
+        .breadcrumb-item{
+
+            @extend %LTZawiMedium;
+            padding-inline-start:0;
+            padding-inline-end:1.7rem;
+
+            &::before{
+
+                @extend %flipX;
+                padding-inline-start: 1.7rem;
+                padding-inline-end:0;
+
+            }
+
+        }
+    }
+}
+/* //breadcrumb */
+
+/* animation */
+/* fill up */ 
+
+@include mixins.keyframemixin(fillup-x) {
+    0% {
+      transform: translateX(150px);
+    }
+   
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @include mixins.keyframemixin(fillup-x-flip) {
+    0% {
+      transform: translateX(-100px);
+    }
+   
+    100% {
+      transform: translateX(0);
+    }
+  }
+/*// fill up */
+@include mixins.keyframemixin(zoomin) {
+    0% {
+      transform: scale(1.2);
+      clip-path: inset(60% 0 60% 60%);
+    }
+   
+    100% {
+      transform:scale(1);
+      clip-path: inset(0 0 0 0);
+      
+    }
+}
+@include mixins.keyframemixin(zoomin-flip) {
+    0% {
+      transform: scale(1.5);
+      clip-path: inset(0 -20% 60% 60%);
+    }
+   
+    100% {
+      transform:scale(1);
+      clip-path: inset(0 0 0 0);
+      
+    }
+}
+/* //zoomin */  
+/* //animation */
+
+
+/* header */
+.navbar-light{
+
+    .navbar-toggler {
+    
+      &.expanded{
+    
+        .navbar-toggler-icon{
+
+
+             &::before {
+              
+              transform: rotate(-45deg);
+            }
+            &::after{
+             
+              transform: rotate(45deg);
+            }
+        }
+      }
+    }
+   .navbar-nav{
+  
+      .nav-link{
+
+          @extend %LTZawiBold;
+
+       }
+    }
+}
+/* //header */
+/* hero */
+.hero-sec{
+
+     background: linear-gradient(to #{var.$left},var.$abluecolor,var.$bgreencolor);
+
+    &::before{
+
+           @extend %flipX;
+    }
+
+    .image{
+
+      
+        margin-inline-end: 40px;
+        @extend %flipX;
+      
+    }
+
+
+}
+/* //hero */
+/* news feed */
+.newsfeed{
+
+   &:hover{
+
+      img{
+
+      transform: scale(1.1) translateX(20px);
+  
+     }
+  }
+}
+/* //news feed */
+/* jobs */
+.jobs{
+ 
+
+    h5{
+
+        @extend %LTZawiMedium;
+
+    }
+    .text{
+        span{
+
+            @extend %LTZawiMedium;
+        }
+    }
+  
+}
+.accordion-item{
+
+
+    .accordion-button{
+        
+        @extend %LTZawiBold;
+
+
+    }
+  
+}
+/* //jobs */
+/* jobs details */
+.card-details{
+
+    .box{
+
+            small{
+
+                @extend %LTZawiMedium;
+            }
+            span{
+
+                @extend %LTZawiBold;
+
+            }
+           
+        
+    }
+
+
+}
+/* //jobs details */
+/* contact us */
+.contact.image{
+
+    img{
+
+        @extend %flipX;
+
+    }
+}
+/* //contact us */
+/* contact remind */
+.contact-remind{
+    &::after{
+            
+
+        #{var.$right}:-50px;
+        @extend %flipX;
+         
+    }
+  
+      .image{
+
+        transform: translateX(150px) scaleX(-1);
+    }
+    // img{
+    //     @extend %flipX;
+    // }
+
+}
+/* //contact remind */
+
+/* scroll */
+/* scroll to top */ 
+.auto-scroll-to-top {
+
+    #{var.$left}: 2rem;
+    #{var.$right}: unset;
+    @extend  %flipX;
+
+}
+/* //scroll to top */
+/* //scroll */
+  
+/*--media query--*/
+@media screen and (min-width:1440px){
+
+    /* contact remind */
+
+      .contact-remind{
+
+        &::after{
+            
+
+             #{var.$right}:-60px;
+          
+         
+        }
+      }
+   /* //contact remind */
+
+}
+@media screen and (max-width:1400px) and (min-width:1395px){
+    
+
+    /* contact remind */
+
+        .contact-remind{
+    
+            &::after{
+                
+                     #{var.$right}:-80px;
+              
+             
+            }
+      
+          }
+
+    /* //contact remind */
+
+
+}
+@media screen and (max-width:1199px){
+
+
+    /* contact remind */
+    .contact-remind{
+     
+     &::after{
+        #{var.$right}: -40px;
+ 
+      }
+
+      .image{
+         
+         transform: translateX(100px) scaleX(-1);
+
+       }
+   }
+   /* contact remind */
+ 
+ }
+@media screen and  (max-width:1024px){
+
+      /* header */
+      .navbar-light{
+
+        .navbar-collapse  {
+
+
+           #{var.$left}:-100%;
+           #{var.$right}:unset !important;
+    
+           &.active{
+        
+            #{var.$left}:0;
+
+        
+          }
+    
+      }
+      .navbar-nav{
+
+          
+      .nav-link{
+      
+            &.show{
+           
+                animation:slideInLeft 0.7s 0.5s backwards;
+
+            }
+            &.hide{
+           
+                animation:slideOutLeft 0.4s 0.07s backwards;
+
+            }
+        
+        }
+
+    }
+
+    }
+    /* //header */
+   /* hero */
+   .hero-sec {
+ 
+      .image {
+     
+        margin-inline-end: 40px;
+      }
+    }
+    /*// hero */
+ 
+ }
+ @media screen and (max-width:991px) {
+
+      /* contact remind */
+      .contact-remind{
+
+       .image{
+
+        transform: translateX(30px) scaleX(-1);
+        margin-top: 0.1rem;
+       }
+        
+     }
+      /* //contact remind */
+     
+
+ }
+ @media screen and (max-width:767px){
+
+
+
+    /* contact remind */
+    .contact-remind{
+
+       &::after {
+
+         #{var.$right}: -30px;
+       }
+       
+    }
+     /* //contact remind */
+   
+}
+/*--//media query--*/
+

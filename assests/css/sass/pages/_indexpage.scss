@@ -1,0 +1,60 @@
+
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins';
+@use '../abstracts/placeholders';
+
+/* hero */
+.hero-sec{
+
+    height:600px;
+    background: linear-gradient(to #{var.$right},var.$abluecolor,var.$bgreencolor);
+    margin-bottom:3rem;
+    @extend %mt-75;
+    
+    &::before{
+
+        content:" ";
+        @extend %pabsolutecontent;
+        top:130px;
+        bottom: unset;
+        background-image:url(../images/hero-vector.svg);
+        @include mixins.backgroundmixin(revert,'',no-repeat);
+        background-position-y:bottom;
+        z-index: -1;
+    }
+    p{
+
+        color:rgba($color: var.$whitecolor, $alpha: 0.37);
+    }
+    .image{
+
+        z-index: -2;
+        margin-inline-end: -40px;
+      
+    }
+    img{
+
+        width: 470px;
+
+    }
+   
+    h3.active{
+
+        @extend %fillupy;
+
+    }
+    p.active{
+
+       
+        @extend %fillupx;
+
+    }
+    .btn.active{
+
+       
+        @extend %fillupy;
+
+    }
+ 
+}
+/* //hero */

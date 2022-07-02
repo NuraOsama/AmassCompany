@@ -1,0 +1,35 @@
+
+@use '../abstracts/variables' as var;
+@use '../abstracts/placeholders';
+
+
+/* heading */
+h3{
+
+    @extend %PoppinsBold;
+    line-height: 1.5;
+       
+}
+h4,h5{
+
+    @extend %PoppinsSemiBold;
+    
+}
+
+.head{
+
+    overflow: hidden;
+
+    p{
+
+        @extend %PoppinsMedium;
+
+    }
+    a{
+
+        @extend %PoppinsSemiBold;
+        
+    }
+}
+/* //heading */
+ 

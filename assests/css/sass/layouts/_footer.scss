@@ -1,0 +1,28 @@
+
+@use '../abstracts/variables' as var;
+@use '../abstracts/placeholders';
+
+/* footer */
+footer{
+
+     background-color: var.$bluecolor;
+
+        a:hover{
+
+            color:var.$greencolor !important;
+        }
+
+     .copyright{
+
+           border-top:2px solid rgba($color: var.$whitecolor, $alpha: 0.08);
+
+        p{
+
+            font-size:0.7rem;
+
+           
+        }
+     }
+
+}
+/* //footer */

@@ -1,0 +1,140 @@
+
+/* abstracts */
+
+@use 'sass/abstracts/variables' as var;
+
+@use 'sass/abstracts/mixins';
+
+@use 'sass/abstracts/placeholders';
+
+/* //abstracts */
+
+/* components & layouts & pages */
+
+@use 'sass/layouts/header';
+
+@use 'sass/layouts/heading';
+
+@use 'sass/layouts/global';
+
+@use 'sass/components/buttons';
+ 
+@use 'sass/components/form';
+
+@use 'sass/components/modal';
+
+@use 'sass/layouts/beadcrumb';
+
+@use 'sass/components/notifit';
+
+@use 'sass/layouts/filter';
+
+@use 'sass/pages/indexpage';
+
+@use 'sass/pages/jobspage';
+
+@use 'sass/pages/contactpage';
+
+@use 'sass/layouts/about';
+
+@use 'sass/layouts/projects';
+
+@use 'sass/layouts/newsfeed';
+
+@use 'sass/layouts/contactremind';
+
+@use 'sass/layouts/footer';
+
+@use 'sass/components/scroll';
+
+@use 'sass/layouts/responsive';
+
+/* //components & layouts & pages */
+
+/* import fonts */
+
+/* en fonts */
+@font-face{
+
+  font-family:PoppinsRegular;
+  src:url(../fonts/Poppins-Regular.ttf);
+  font-display: swap;
+
+}
+@font-face{
+
+  font-family:Poppinslight;
+  src:url(../fonts/Poppins-light.ttf);
+  font-display: swap;
+
+}
+@font-face{
+
+  font-family:PoppinsMedium;
+  src:url(../fonts/Poppins-Medium.ttf);
+  font-display: swap;
+
+}
+@font-face{
+
+  font-family:PoppinsSemiBold;
+  src:url(../fonts/Poppins-SemiBold.ttf);
+  font-display: swap;
+
+}
+@font-face{
+
+  font-family:PoppinsBold;
+  src:url(../fonts/Poppins-Bold.ttf);
+  font-display: swap;
+
+}
+
+/* //en fonts */
+
+/* ar fonts */
+
+@font-face{
+
+  font-family:LTZawiRegular;
+  src:url(../fonts/29LTZawi-Regular.otf);
+  font-display: swap;
+
+}
+@font-face{
+
+  font-family:LTZawiMedium;
+  src:url(../fonts/29LTZawi-Medium.otf);
+  font-display: swap;
+
+}
+@font-face{
+
+  font-family:LTZawiBold;
+  src:url(../fonts/29LTZawi-Bold.otf);
+  font-display: swap;
+
+}
+
+/* //ar fonts */
+
+
+body {
+
+    direction:var.$ltrdir;
+    text-align:var.$left;
+    @extend %PoppinsRegular;
+    @extend %body;
+
+}
+
+/* lang */
+  .lang-en{
+
+    @extend %d-none;
+
+  }
+
+  /* //lang */
+
+

@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins';
+@use '../abstracts/placeholders';
+
+
+/* contact remind */
+.contact-remind{
+    overflow: hidden;
+
+        &::before{
+            
+
+            @extend %pesudoabsolute;
+            top: 0;
+            bottom: 0;
+            #{var.$left}:0;
+            #{var.$right}:0;
+            width: 100%;
+            height: 70%;
+            margin: auto;
+            background-color:var.$greencolor;  
+
+        }
+        &::after{
+            
+
+            @extend %pesudoabsolute;
+            top: 15px;
+            #{var.$right}:50px;
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/contact-vector.svg);
+            @include mixins.backgroundmixin(auto,#{var.$right},no-repeat);
+         
+
+        }
+  
+
+    .content{
+
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+  
+    .image{
+
+        transform: translateX(-30px);
+    }
+    img{
+
+        // width: 370px;
+        width:350px
+    }
+    .btn.active{
+
+        @extend %fillupy-flip;
+    }
+
+
+}
+/* //contact remind */
+

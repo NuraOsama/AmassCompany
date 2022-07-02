@@ -1,0 +1,55 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/placeholders';
+
+
+/* about */
+.about{
+    ul{
+
+        li{
+
+            display: inline-flex;
+            align-items: flex-start;
+
+            &:not(:last-child){
+
+                margin-bottom: 1rem;
+            }
+
+            .icon{
+
+                margin-inline-end: 1rem;
+            }
+            span{
+                
+                display: block;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                text-align: center;
+                color: var.$whitecolor;
+                background: linear-gradient(to bottom #{var.$right},var.$cgreencolor,var.$dgreencolor);
+
+                img{
+                    transform: scale(0.5);
+                }
+
+            }
+           
+        }
+    }
+    .button{
+
+        bottom: 0;
+        margin-inline-start: 2.8rem;
+    }
+    h4.active{
+
+        @extend %fillupx;
+
+      
+    }
+
+  }
+/* //about */
+

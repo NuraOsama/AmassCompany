@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/placeholders';
+/* projects */
+
+.project{
+
+    .image{  
+
+        text-align: center;
+    }
+    img{
+
+        width: 165px;
+        height: 120px;
+        object-fit: contain;
+        object-position: center;
+
+    }
+}
+/* //projects */

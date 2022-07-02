@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/placeholders';
+
+/* news feed */
+.col-lg-4:nth-child(even){
+
+    .newsfeed{
+       .categorie{
+       
+          span{
+
+            background-color: var.$bluecolor !important;
+        
+         }
+      }
+    }
+}
+.newsfeed{
+
+          box-shadow:0  5px 12px rgba($color: var.$darkcolor, $alpha: 0.05);
+          padding-bottom: 1.5rem;
+          @extend %transition-md;
+          transition-delay: 1s;
+
+
+       img{
+
+          transform: scale(1) translateX(0);
+          @extend %transition-md;
+
+         
+        
+       }
+
+    &:hover{
+
+       @extend %boxshadow;
+
+        .image.activate{
+           img{
+
+             transform: scale(1.1) translateX(-20px);
+           
+           }
+        }
+    }
+    .categorie{
+
+        top: 0;
+        display: flex;
+        align-items: flex-start;
+        height: 100%;
+        margin-top: -30px;
+        z-index: 1;
+
+        
+    }
+   
+    h5{
+
+        @extend %PoppinsSemiBold;
+    }
+   
+
+ 
+}

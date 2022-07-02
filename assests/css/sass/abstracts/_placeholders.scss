@@ -1,0 +1,189 @@
+@use './variables' as var;
+@use './mixins';
+
+
+%body{
+
+  padding: 0;
+  margin: 0;
+  color:var.$darkbluecolor;
+  font-size:1rem;
+  background-color:var.$whitecolor;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  line-height: 1.42857143;
+  padding-#{var.$right}:0 !important;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  
+}
+%PoppinsRegular{
+
+  font-family: "PoppinsRegular",sans-serif;
+
+}
+%PoppinsMedium{
+
+  font-family: "PoppinsMedium",sans-serif;
+
+}
+%PoppinsSemiBold{
+
+  font-family: "PoppinsSemiBold",sans-serif;
+
+}
+%PoppinsBold{
+
+  font-family: "PoppinsBold",sans-serif;
+
+}
+%LTZawiRegular{
+
+  font-family: "LTZawiRegular",sans-serif;
+
+}
+%LTZawiMedium{
+
+  font-family: "LTZawiMedium",sans-serif;
+
+}
+%LTZawiBold{
+
+  font-family: "LTZawiBold",sans-serif;
+
+}
+ %pesudoabsolute{
+
+  @include mixins.pesudopositionmixin;  
+
+ }
+ %pabsolutecontent{
+
+   @include mixins.positionmixin;
+
+ }
+  %mt-75{
+
+    margin-top: 75px;
+    
+  }
+   %mt-4{
+
+    margin-top: 4rem;
+   }
+
+   %d-none{
+
+    display: none !important;
+
+  }
+
+   %d-block{
+       
+       display:block !important;
+   }
+   
+   %d-inlineflex{
+
+    display: inline-flex !important;
+    
+   }
+   %object{
+
+     object-fit: cover;
+     object-position:center;
+
+   }
+
+   %visible{
+
+    opacity:1;
+    visibility: visible;
+
+   }
+   %visible-none{
+
+       opacity:0;
+       visibility:hidden;
+
+   } 
+
+   %boxshadow{
+
+      box-shadow: 0 15px 5px rgba($color: var.$darkcolor, $alpha: 0.02);
+
+   }
+   %btnafter{
+
+      top: auto;
+      bottom: 0;
+      height: 100%;
+      
+   }
+
+   %flipX{
+
+    transform: scaleX(-1);
+
+   }
+
+
+  %fillupy{
+
+     animation: fillup-y 1.5s 0.25s backwards;
+
+  }
+  %fillupy-flip{
+
+    animation: fillup-y-flip 1.5s 0.25s backwards;
+
+ }
+ 
+  %fillupx{
+
+    animation: fillup-x 1.5s 0.25s backwards;
+
+  }
+  %fillupx-flip{
+
+    animation:  fillup-x-flip 1.5s 0.25s backwards;
+
+  }
+ 
+  %zoomin{
+
+    animation: zoomin 1.8s  alternate;
+
+  }
+  %zoomin-flip{
+
+    animation: zoomin-flip 1.8s   alternate;
+
+  }
+   %transition{
+
+      @include mixins.prefixermixin(transition,all 0.5s ease-in-out,webkit moz o ms)
+
+   }
+   %transition-linear{
+
+     @include mixins.prefixermixin(transition,all 0.3s linear,webkit moz o ms)
+
+   }
+   %transition-md{
+
+    @include mixins.prefixermixin(transition,all 0.7s linear,webkit moz o ms)
+
+  }
+
+
+
+
+
+
+
+
+
+  
+

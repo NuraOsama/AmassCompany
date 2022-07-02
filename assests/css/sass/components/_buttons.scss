@@ -1,0 +1,177 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/placeholders';
+
+
+/* buttons */
+.btn{
+
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    width: 100%;
+    max-width: max-content;
+    min-width: min-content;
+    color: var.$whitecolor !important;
+    border:unset;
+    @extend %PoppinsMedium;
+    text-transform: capitalize;
+    border-radius:7px;
+    text-align: center;
+    cursor: pointer !important;
+    white-space: unset;
+    box-shadow: none !important;
+    outline: none !important;
+    overflow: hidden;
+    z-index: 1;
+    @extend %transition;
+
+    &::before{
+
+        @extend  %pesudoabsolute;
+        top: 0;
+        #{var.$left}: -5px;
+        width: 45px;
+        height: 101%;
+        transform: skewX(-15deg);
+        
+    }
+   &::after {
+
+        @extend  %pesudoabsolute;
+        top: 0;
+        #{var.$left}: 0;
+        #{var.$right}: 0;
+        width: 100%;
+        height: 0;
+        background-color:var.$whitecolor;
+        background-image: linear-gradient(315deg, var.$whitecolor 0%, var.$whitecolor 74%);
+        @extend %transition;
+        z-index: -1;
+
+    }
+    &:hover{
+        
+       &::after {
+            @extend %btnafter;
+        }
+     
+    }
+    span{
+
+        color:var.$whitecolor;
+        margin-inline-end: 1.3rem;
+
+    } 
+    
+    &.btn-primary{
+
+        background-color: var.$bluecolor;
+
+        &::before{
+
+            background-color:var.$greencolor;
+        }
+       
+    }
+
+    &.btn-primary,
+    &.btn-category{
+   
+        &::after{
+
+
+
+            background-color:var.$greencolor;
+            background-image: linear-gradient(315deg, var.$greencolor 0%, var.$greencolor 74%);
+    
+    
+         }
+    }
+
+    &.btn-green{
+
+        background-color: var.$greencolor;
+
+        &::before{
+
+            background-color:var.$whitecolor;
+        }
+        span{
+
+            color:var.$greencolor !important;
+
+
+        }
+        &:hover{
+
+            color:var.$bluecolor !important;
+        }
+    }
+
+    &.btn-blue{
+
+        background-color: var.$whitecolor;
+        color:var.$bluecolor !important;
+
+
+        &::before{
+
+            background-color:var.$bluecolor;
+
+        }
+       
+
+    }
+
+    &.btn-info{
+
+        font-size: 0.8rem;
+        padding: 0.7rem 0.8rem;
+        background-color:rgba($color: var.$purplecolor, $alpha: 0.35);
+        color:var.$bluecolor !important;
+        @extend %PoppinsSemiBold;
+      
+
+    }
+
+    &.btn-blue,
+    &.btn-info{
+
+        &:after {
+            
+            background-color:var.$bluecolor;
+            background-image: linear-gradient(315deg, var.$bluecolor 0%, var.$bluecolor 74%);
+
+           }
+        
+        &:hover{
+        
+            color:var.$whitecolor !important;
+        }
+    }
+
+    &.btn-category{
+
+        font-size: 1.1rem;
+        padding:1.3rem 1rem;
+        background-color: var.$bluecolor;
+        outline:1px var.$purplecolor !important;
+        width: 100%;
+        max-width: 100%;
+
+     }
+    &.btn-info,
+    &.btn-category{
+
+        &::before{
+
+            display: none
+        }
+
+    }
+}
+
+/* //buttons */
+

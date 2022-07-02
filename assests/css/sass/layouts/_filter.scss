@@ -1,0 +1,95 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/placeholders';
+
+/* filter */
+aside{
+
+    .button{
+
+        margin-bottom: 2.3rem;
+    }
+}
+
+.filter{
+
+    border:1px solid var.$ecgraycolor;
+    border-radius: 0.5rem;
+}
+.accordion-item{
+
+    border:unset;
+    border-radius: unset;
+    background-color: transparent;
+
+    &:first-of-type {
+        
+        border-top-left-radius:0;
+        border-top-right-radius: 0;
+        
+    }
+
+    .accordion-button{
+        
+        font-size: 1.03rem;
+        @extend %PoppinsSemiBold;
+        background-color:rgba($color: var.$purplecolor, $alpha: 0.35);
+        color:var.$bluecolor;
+        box-shadow: unset;
+        padding-inline-start: 1.5rem;
+        padding-inline-end: 1.2rem;
+        border-top: 1px solid var.$ecgraycolor;
+        border-bottom: 1px solid var.$ecgraycolor;
+
+        @extend %transition-linear;
+
+    
+        &.collapsed{
+
+
+            border-bottom: transparent;
+
+        }
+        .icon{
+
+            margin-inline-end:1.5rem;
+        }
+        &::after {
+
+            background-image: url("../images/item-angle.svg");
+            background-position: center;
+            background-size: 0.95rem;
+            transform: rotate(-180deg);
+            
+            
+        }
+        &:not(.collapsed)::after{
+    
+            transform: rotate(0);
+    
+        }
+
+    }
+  
+}
+.accordion-body{
+
+    padding-inline-start: 1.5rem;
+    padding-inline-end: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .d-flex:not(:last-child){
+
+        margin-bottom: 1.3rem;
+
+    }
+
+
+    .count{
+
+        color:var.$cvgraycolor;
+        margin-top: 0.2rem;
+
+    }
+}
+/* //filter */
